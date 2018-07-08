@@ -2,3 +2,10 @@
 1.git add 文件名/. 
 2.git commit -m "你的说明"
 3.git push origin 
+
+
+服务器启动
+python3 manage.py runserver 0.0.0.0:9090
+
+终止
+ctrl c
