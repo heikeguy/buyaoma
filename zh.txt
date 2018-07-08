@@ -1,0 +1,4 @@
+更新文件到服务器
+1.git add 文件名/. 
+2.git commit -m "你的说明"
+3.git push origin 
