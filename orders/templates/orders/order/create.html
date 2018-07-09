@@ -7,7 +7,7 @@
 {% block content %}
 
     <div class="panel panel-primary">
-        <div class="panel-heading">Your order</div>
+        <div class="panel-heading">你的订单</div>
         <div class="panel-body">
             <ul class="list-group">
                 {% for item in cart %}
@@ -22,13 +22,13 @@
         </div>
     </div>
 
-    <h1>Checkout</h1>
+    <h1>付款</h1>
     <form action="." method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
         {% buttons %}
             <button type="submit" class="btn btn-success btn-product">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Place order
+                <span class="glyphicon glyphicon-shopping-cart"></span> 确认订单
             </button>
         {% endbuttons %}
     </form>

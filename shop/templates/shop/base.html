@@ -16,14 +16,14 @@
 
 <div class="container">
     <div class="page-header">
-        <a href="/"><h1>My shop</h1></a>
+        <a href="/"><h1>FFF团的爱心商铺</h1></a>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
             {# call __len__ #}
             {% with total_items=cart|length %}
                 {% if cart|length > 0 %}
-                    Your cart:
+                    你的购物车:
                     <a href="{% url "cart:cart_detail" %}">
                         {# If total_items is 1, the output will be 1 item. #}
                         {# If total_items is 2, the output will be 2 items. #}
@@ -31,7 +31,7 @@
                         ${{ cart.get_total_price }}
                     </a>
                 {% else %}
-                    Your shopping cart is empty.
+                    你的购物车空空如也
                 {% endif %}
             {% endwith %}
         </div>
