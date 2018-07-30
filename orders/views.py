@@ -22,7 +22,8 @@ def order_create(request):
             order_created(order.id)
             request.session['order_id'] = order.id
             # redirect to the payment
-            return redirect('payment:process')
+            # return redirect('payment:process/'+str(order.get_total_cost()))
+            return redirect('http://127.0.0.1:8000/payment/process/'+str(order.get_total_cost()))
 
     else:
         form = OrderCreateForm()

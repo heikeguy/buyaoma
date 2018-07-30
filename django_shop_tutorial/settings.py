@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'orders',
     'paypal.standard.ipn',
     'payment',
+    #'alipay',
 ]
 
 MIDDLEWARE = [
@@ -194,8 +195,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(__file__),'static')
+STATICFILES_DIRS = (
+     os.path.join(BASE_DIR, 'static').replace('\\', '/'),
+     ('img',os.path.join(STATIC_ROOT,'img').replace('\\', '/')),
+)
+
+
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+# alipay
+ALIPAY_PARTNER = '2088124923792424'
+ALIPAY_PRIVATE_KEY = 'kzmkykvprpmujaqw97afaw848fq310su'
+ALIPAY_SELLER_ID = '2088124923792424'
+ALIPAY_NOTIFY_IP = (
+        "121.0.26.0/23",
+        "110.75.128.0/19",
+        "115.124.16.0/24",
+        )
+
+
+
+
