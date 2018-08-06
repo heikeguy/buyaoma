@@ -24,7 +24,8 @@ app_private_key_string = '''-----BEGIN RSA PRIVATE KEY-----
 
 
 APP_ID = '2016091900543893'
-NOTIFY_URL = "127.0.0.1:8000/alipay_callback"
+# NOTIFY_URL = "127.0.0.1:8000/alipay_callback"
+NOTIFY_URL = "http://106.12.25.171:8989/alipay_callback"
 
 
 def init_alipay_cfg():
